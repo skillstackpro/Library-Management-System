@@ -34,17 +34,17 @@ public class WaitListQueue {
             tail = null;
     }
 
-//    public void viewWaitlist() {
-//        if (head == null) {
-//            System.out.println("Waitlist is empty.");
-//            return;
-//        }
-//        System.out.println("\n--- Current Waitlist (Queue FIFO) ---");
-//        StudentNode temp = head;
-//        while (temp != null) {
-//            System.out.print(temp.name + " -> ");
-//            temp = temp.next;
-//        }
-//        System.out.println("END");
-//    }
+    public void viewWaitlist() {
+        if (head == null) {
+            System.out.println("Waitlist is empty.");
+            return;
+        }
+        System.out.println("\n--- Current Waitlist (Queue FIFO) ---");
+        StudentNode temp = head;
+        while (temp != null) {
+            System.out.print(temp.name + " -> ");
+            temp = temp.next;
+        }
+        System.out.println("END");
+    }
 }

@@ -1,4 +1,3 @@
-
 class StudentNode {
     String name;
     StudentNode next;
@@ -9,9 +8,9 @@ class StudentNode {
     }
 }
 
-class WaitlistQueue {
-    StudentNode head = null;
-    StudentNode tail = null;
+public class WaitListQueue {
+    private StudentNode head = null;
+    private StudentNode tail = null;
 
     public void addStudent(String name) {
         StudentNode node = new StudentNode(name);
@@ -21,30 +20,31 @@ class WaitlistQueue {
             tail.next = node;
             tail = node;
         }
-        System.out.println("Student added to waitlist.");
+        System.out.println("Student " + name + " added to waitlist.");
     }
 
     public void processNextStudent() {
         if (head == null) {
-            System.out.println("Waitlist empty.");
+            System.out.println("No students in waitlist.");
             return;
         }
-        System.out.println("Processing: " + head.name);
+        System.out.println("Notifying student: " + head.name + " (Book is available!)");
         head = head.next;
         if (head == null)
             tail = null;
     }
 
-    public void viewWaitlist() {
-        if (head == null) {
-            System.out.println("Waitlist empty.");
-            return;
-        }
-        StudentNode temp = head;
-        while (temp != null) {
-            System.out.print(temp.name + " -> ");
-            temp = temp.next;
-        }
-        System.out.println("END");
-    }
+//    public void viewWaitlist() {
+//        if (head == null) {
+//            System.out.println("Waitlist is empty.");
+//            return;
+//        }
+//        System.out.println("\n--- Current Waitlist (Queue FIFO) ---");
+//        StudentNode temp = head;
+//        while (temp != null) {
+//            System.out.print(temp.name + " -> ");
+//            temp = temp.next;
+//        }
+//        System.out.println("END");
+//    }
 }

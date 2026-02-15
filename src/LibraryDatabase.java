@@ -60,14 +60,14 @@ public class LibraryDatabase {
         return null;
     }
 
-//    public void displayAll() {
-//        if (count == 0) {
-//            System.out.println("Library is empty.");
-//            return;
-//        }
-//        System.out.println("\nID\tTitle\t\tAuthor\t\tCopies");
-//        for (int i = 0; i < count; i++) {
-//            System.out.println(books[i].getId() + "\t" + books[i].getTitle() + "\t\t" + books[i].getAuthor() + "\t\t" + books[i].getCopies());
-//        }
-//    }
+    public void displayAll() {
+        if (count == 0) {
+            System.out.println("Library is empty.");
+            return;
+        }
+        System.out.println("\nID\tTitle\t\tAuthor\t\tCopies");
+        for (int i = 0; i < count; i++) {
+            System.out.println(books[i].getId() + "\t" + books[i].getTitle() + "\t\t" + books[i].getAuthor() + "\t\t" + books[i].getCopies());
+        }
+    }
 }

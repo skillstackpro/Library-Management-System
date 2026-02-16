@@ -160,13 +160,13 @@ public class LibrarySystem {
                         System.out.println("This book does not belong to our library.");
                     }
                     break;
-//                case 4:
-//                    db.displayAll();
-//                    break;
-//                case 5:
-//                    return;
-//                default:
-//                    System.out.println("Invalid choice.");
+                case 4:
+                    db.displayAll();
+                    break;
+                case 5:
+                    return;
+                default:
+                    System.out.println("Invalid choice.");
             }
         }
     }
